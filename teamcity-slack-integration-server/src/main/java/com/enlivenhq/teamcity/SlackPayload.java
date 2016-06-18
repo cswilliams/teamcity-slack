@@ -73,7 +73,7 @@ public class SlackPayload {
     }
 
     public SlackPayload(String project, String build, String branch, String statusText, String statusColor, String btId, long buildId, String serverUrl) {
-        String escapedBranch = branch.length() > 0 ? " [" + branch + "]" : "";
+        String escapedBranch = branch.length() > 0 ? " *[" + branch + "]*" : "";
         statusText = "<" + serverUrl + "/viewLog.html?buildId=" + buildId + "&buildTypeId=" + btId + "|" + statusText + ">";
 
         String statusEmoji = statusColor.equals("danger") ? ":x: " : statusColor.equals("warning") ? "" : ":white_check_mark: ";

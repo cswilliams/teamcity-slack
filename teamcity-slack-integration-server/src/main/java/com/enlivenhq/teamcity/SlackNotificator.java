@@ -189,7 +189,7 @@ public class SlackNotificator implements Notificator {
 
     private String getBranch(SBuild build) {
         Branch branch = build.getBranch();
-        if (branch != null && branch.getName() != "<default>") {
+        if (branch != null) {
             return branch.getDisplayName();
         } else {
             return "";

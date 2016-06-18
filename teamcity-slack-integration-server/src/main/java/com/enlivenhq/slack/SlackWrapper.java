@@ -29,7 +29,7 @@ public class SlackWrapper
     protected Boolean useAttachment;
 
     public SlackWrapper () {
-        this.useAttachment  = TeamCityProperties.getBooleanOrTrue("teamcity.notification.slack.useAttachment");
+        this.useAttachment  = (TeamCityProperties.getBoolean("teamcity.notification.slack.useAttachment") || false);
     }
 
     public SlackWrapper (Boolean useAttachment) {

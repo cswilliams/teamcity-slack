@@ -9,7 +9,7 @@ public class SlackWrapperTest {
     @Test
     public void testSlackWrapperUsesAttachmentByDefault() throws Exception {
         SlackWrapper slack = new SlackWrapper();
-        assertTrue(slack.useAttachment);
+        assertFalse(slack.useAttachment);
     }
 
     @org.testng.annotations.Test
